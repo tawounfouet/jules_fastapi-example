@@ -6,8 +6,10 @@ WORKDIR /code
 
 # Install system dependencies
 # gcc and others might be needed for some python packages, although we use binary wheels mostly
+# libpq-dev is needed for psycopg2 (if building from source) or helpful for runtime
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
+    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file into the container at /code
