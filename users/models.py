@@ -9,6 +9,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String, unique=True, index=True)
     hashed_password: Mapped[str] = mapped_column(String)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    avatar_url: Mapped[str] = mapped_column(String, nullable=True)
 
     # Relationships
     posts = relationship("Post", back_populates="owner", cascade="all, delete-orphan")
