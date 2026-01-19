@@ -1,4 +1,4 @@
-from app.users import services, schemas
+from users import services, schemas
 
 def test_create_user(db):
     user_in = schemas.UserCreate(email="test@example.com", password="password")

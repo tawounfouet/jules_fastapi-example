@@ -1,10 +1,10 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.core.dependencies import get_db, get_current_user
-from app.comments import schemas, services
-from app.users.models import User
-from app.blog import services as blog_services
+from config.dependencies import get_db, get_current_user
+from comments import schemas, services
+from users.models import User
+from blog import services as blog_services
 
 router = APIRouter(prefix="/comments", tags=["comments"])
 

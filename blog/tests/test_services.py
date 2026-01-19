@@ -1,6 +1,6 @@
-from app.blog import services, schemas
-from app.users import services as user_services
-from app.users import schemas as user_schemas
+from blog import services, schemas
+from users import services as user_services
+from users import schemas as user_schemas
 
 def test_create_post(db):
     user_in = user_schemas.UserCreate(email="author@example.com", password="password")

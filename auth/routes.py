@@ -3,10 +3,10 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-from app.core.dependencies import get_db
-from app.core import security
-from app.core.config import settings
-from app.auth import schemas, services
+from config.dependencies import get_db
+from config import security
+from config.settings import settings
+from auth import schemas, services
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

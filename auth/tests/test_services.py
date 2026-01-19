@@ -1,6 +1,6 @@
-from app.auth import services
-from app.users import services as user_services
-from app.users import schemas as user_schemas
+from auth import services
+from users import services as user_services
+from users import schemas as user_schemas
 
 def test_authenticate_user(db):
     user_in = user_schemas.UserCreate(email="test@example.com", password="password")

@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from app.comments.models import Comment
-from app.comments.schemas import CommentCreate
+from comments.models import Comment
+from comments.schemas import CommentCreate
 
 def create_comment(db: Session, comment: CommentCreate, user_id: int):
     db_comment = Comment(**comment.model_dump(), owner_id=user_id)

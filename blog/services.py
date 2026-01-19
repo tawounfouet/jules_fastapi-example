@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from app.blog.models import Post
-from app.blog.schemas import PostCreate
+from blog.models import Post
+from blog.schemas import PostCreate
 
 def create_post(db: Session, post: PostCreate, user_id: int):
     db_post = Post(**post.model_dump(), owner_id=user_id)

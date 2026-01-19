@@ -1,8 +1,8 @@
-from app.comments import services, schemas
-from app.blog import services as blog_services
-from app.blog import schemas as blog_schemas
-from app.users import services as user_services
-from app.users import schemas as user_schemas
+from comments import services, schemas
+from blog import services as blog_services
+from blog import schemas as blog_schemas
+from users import services as user_services
+from users import schemas as user_schemas
 
 def test_create_comment(db):
     user_in = user_schemas.UserCreate(email="author@example.com", password="password")
